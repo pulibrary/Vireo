@@ -535,7 +535,8 @@ public class SubmissionHelperUtility {
     }
 
     public List<FieldValue> getCommitteeChairFieldValues() {
-        return submission.getFieldValuesByPredicateValue("dc.contributor.advisor");
+//        return submission.getFieldValuesByPredicateValue("dc.contributor.advisor");
+        return submission.getFieldValuesByPredicateValueStartsWith("dc.contributor.advisor");
     }
 
     public String getFirstName(String name) {
@@ -574,7 +575,8 @@ public class SubmissionHelperUtility {
     }
 
     public List<FieldValue> getCommitteeMemberFieldValues() {
-        return submission.getFieldValuesByPredicateValue("dc.contributor.committeeMember");
+//        return submission.getFieldValuesByPredicateValue("dc.contributor.committeeMember");
+        return submission.getFieldValuesByPredicateValueStartsWith("dc.contributor.committeeMember");
     }
 
     public String getLanguageProQuestCode() {
