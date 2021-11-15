@@ -61,7 +61,7 @@ spring:
     #database-platform: org.hibernate.dialect.PostgreSQLDialect
     # MySQL
     #database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
-  
+
     generate-ddl: true
     show-sql: false
     hibernate.ddl-auto: create-drop
@@ -95,7 +95,7 @@ info:
 
 
 app:
-  url: http://localhost:9000
+  url: http://localhost:9000/vireo
 
   # value generated from property assets.uri
   # either defined in pom.xml or via package argument
@@ -115,14 +115,14 @@ app:
 
   # edu.tamu.weaver.auth.service.UserCredentialsService
   authority.admins: admin@tdl.org,aggieJack@tamu.edu
-  
-  
+
+
   security:
     # edu.tamu.weaver.auth.service.CryptoService
     secret: verysecretsecret
     # edu.tamu.weaver.filter.CorsFilter
     allow-access: http://localhost:9000
-    
+
   # edu.tamu.weaver.email.config.WeaverEmailConfig
   email:
     host: relay.tamu.edu
@@ -137,10 +137,10 @@ app:
 
   # edu.tamu.weaver.reporting.controller.ReportingController
   reporting.address: reporting@tdl.org
-  
+
   # edu.tamu.weaver.validation.controller.ValidationsController
   model.packages: org.tdl.vireo.model
-  
+
   # edu.tamu.weaver.utility.HttpUtility
   http.timeout: 10000
 
@@ -180,7 +180,7 @@ wro:
 # NOTE: weaver-wro dependency will not be able to access class when deployed as jar
 theme:
   managerService: org.tdl.vireo.service.VireoThemeManagerService
-  # define the location of sass/css files 
+  # define the location of sass/css files
   default.css: sass/app.scss
   cacheReloadUrl: ${app.url}/wro/wroAPI/reloadCache
 
